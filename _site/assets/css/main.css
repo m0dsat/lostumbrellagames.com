@@ -64,16 +64,23 @@ body.mindbreak {
 
 .credits {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.75rem;
   color: white;
   font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
-  margin-top: 2rem;
+  margin: 2rem auto 80px auto;
+  padding: 0 1.5rem;
+  max-width: 800px;
   flex-wrap: wrap;
   text-align: center;
-  margin-bottom: 80px;
+  gap: 3rem;
+}
+
+.credits-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .credits-logo {
@@ -88,7 +95,6 @@ body.mindbreak {
 
 .credits p {
   font-family: "Oswald", sans-serif;
-  color: rgb(255, 255, 255);
   font-size: 0.9rem;
   margin: 0;
   white-space: nowrap;
@@ -98,7 +104,6 @@ body.mindbreak {
   max-height: 110px;
   width: auto;
   padding-top: 4px;
-  margin-right: 70px;
 }
 
 .presskit-button {
@@ -116,6 +121,19 @@ body.mindbreak {
   transform: scale(1.08);
 }
 
+/* Make it stack on smaller screens */
+@media (max-width: 600px) {
+  .credits {
+    flex-direction: column;
+    text-align: center;
+  }
+  .credits-left {
+    flex-direction: column;
+  }
+  .presskit-button {
+    margin-top: 0.5rem;
+  }
+}
 .frontpage {
   display: flex;
   flex-direction: column;
